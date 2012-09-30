@@ -1,0 +1,8 @@
+rvm --create use 1.9.3-p194@unfriendroulette
+
+if [ -e .secrets ]
+then
+    . .secrets
+else
+    echo "You are missing a .secrets file containing various environment variables"
+fi

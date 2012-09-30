@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'sinatra-sprockets'
+gem 'sprockets-sass'
+gem 'sinbook'
+gem 'haml'
+gem 'sass'
+gem 'thin'
+gem 'shotgun'
