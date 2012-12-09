@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/contrib'
+require 'sinatra/partial'
 
 include Koala
 
