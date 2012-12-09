@@ -1,7 +1,63 @@
+$font-color:white;
+$hover-color: #999;
+$border-width: 0.03em;
+
 body {
   padding: 0px;
   margin: 0px;
 
-  color: white;
+  color: $font-color;
   background-color: black;
+
+  font-family: 'Raleway', sans-serif;
+}
+
+.hidden {
+  display: none;
+  opacity: 0.0;
+  width: 0px;
+  height: 0px;
+}
+
+a, a:visited {
+  color: $font-color;
+  text-decoration: none;
+  border-top: $border-width dotted $font-color;
+  border-bottom: $border-width dotted $font-color;
+  padding: 0.1em;
+  margin: 0px 1em;
+}
+
+a:hover {
+  color: $hover-color;
+  border-top: $border-width dotted $hover-color;
+  border-bottom: $border-width dotted $hover-color;
+}
+
+.container {
+  .loading {
+    text-align: center;
+    margin-top: 1%;
+  }
+
+  .begin, .again, .login, .countdown {
+    display: block;
+    text-align: center;
+    font-size: 7em;
+    margin-top: 10%;
+  }
+
+  .slideshow {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.image-loader {
+  width: 1px;
+  max-width: 1px;
+  height: 1px;
+  max-height: 1px;
+  opacity: 0.0;
+  overflow: hidden;
 }

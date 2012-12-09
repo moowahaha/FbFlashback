@@ -1,8 +1,3 @@
-rvm --create use 1.9.3-p194@unfriendroulette
+rvm --create use 1.9.3-p194@fbflashback
 
-if [ -e .secrets ]
-then
-    . .secrets
-else
-    echo "You are missing a .secrets file containing various environment variables"
-fi
+. .dev_env
