@@ -28,7 +28,7 @@ displayImage = ->
 
   setTimeout(
     displayImage
-    , 30
+    , 20
   )
 
 $.getJSON '/photos', (data) ->

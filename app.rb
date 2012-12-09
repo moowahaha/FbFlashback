@@ -33,7 +33,6 @@ end
 get '/photos' do
   photos = []
   albums = []
-  albums_hit = {}
 
   graph = Koala::Facebook::API.new(session['access_token'])
 
@@ -54,13 +53,14 @@ get '/photos' do
   graph.batch do |batch|
     albums.each do |album|
       batch.get_connections(album['id'], 'photos', limit: 1000) do |nested_result|
-        photos << nested_result.shuffle.first['images'].first['source'] unless albums_hit[album['id']]
-        albums_hit[album['id']] = true
+        nested_result.sample(6).each do |photo|
+          photos << photo['images'].first['source']
+        end
       end
     end
   end
 
-  json photos.flatten.uniq.shuffle
+  json photos.flatten.uniq.shuffle[0...199]
 end
 
 def login!
