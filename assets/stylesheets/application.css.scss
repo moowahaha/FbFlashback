@@ -1,15 +1,18 @@
 $font-color:white;
 $hover-color: #999;
-$border-width: 0.03em;
+$border-width: 3px;
 
 body {
   padding: 0px;
   margin: 0px;
+  min-width: 1080px;
+  min-height: 500px;
 
   color: $font-color;
   background-color: black;
 
   font-family: 'Raleway', sans-serif;
+  font-size: 15px;
 }
 
 .hidden {
@@ -24,8 +27,8 @@ a, a:visited {
   text-decoration: none;
   border-top: $border-width dotted $font-color;
   border-bottom: $border-width dotted $font-color;
-  padding: 0.1em;
-  margin: 0px 1em;
+  padding: 10px;
+  margin: 0px 100px;
 }
 
 a:hover {
@@ -35,21 +38,56 @@ a:hover {
 }
 
 .container {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+
   .loading {
     text-align: center;
-    margin-top: 1%;
   }
 
   .begin, .again, .login, .countdown {
     display: block;
     text-align: center;
-    font-size: 7em;
-    margin-top: 10%;
+    font-size: 100px;
+    margin-top: 100px;
+  }
+
+  .again {
+    .like_button {
+      margin-right: -150px;
+    }
   }
 
   .slideshow {
     margin: 0;
     padding: 0;
+  }
+}
+
+.homepage {
+  .disclaimer {
+    font-size: 29px;
+    padding-top: 25px;
+    color: $hover-color;
+    text-align: center;
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    height: 30px;
+    bottom: 0;
+
+    a, a:visited {
+      color: $hover-color;
+      border: none;
+    }
+
+    a:hover {
+      color: $font-color;
+    }
   }
 }
 

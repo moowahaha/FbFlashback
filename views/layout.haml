@@ -5,7 +5,9 @@
   %head
     %title
       Facebook Flashback
-    %meta{name: 'description', content: 'Have your FB life flash before your eyes'}
+
+    %meta{name: 'description', content: 'Have your Facebook life flash before your eyes'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=0.7'}
 
     %link{href: 'http://fonts.googleapis.com/css?family=Raleway:100', rel: 'stylesheet', type: 'text/css'}
 
@@ -16,3 +18,4 @@
     = yield
 
     = partial :tracking, template_engine: :erb
+    = partial :like_button_js, template_engine: :erb
