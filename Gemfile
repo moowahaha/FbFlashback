@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'heroku'
-gem 'sinatra'
+gem 'sinatra', '>= 4.1.0'
 gem 'sinatra-sprockets'
-gem 'sinatra-contrib'
+gem 'sinatra-contrib', '>= 4.1.0'
 gem 'sprockets-sass'
 gem 'coffee-script'
 gem 'haml_coffee_assets'
